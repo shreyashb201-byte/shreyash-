@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Store — Full Static Preview</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f8fafc;
+      color: #111827;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 1.5rem;
+      min-height: 100vh;
+      background: #f8fafc;
+      color: #111827;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+    nav a {
+      color: #1d4ed8;
+      text-decoration: none;
+      margin-right: 0.8rem;
+    }
+    nav a:last-child { margin-right: 0; }
+    .hero {
+      background: linear-gradient(90deg, #eef2ff 0%, #f8fafc 100%);
+      border: 1px solid #dbeafe;
+      border-radius: 18px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .hero h2 { margin-top: 0; }
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+    .cards {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+    }
+    .card h3 {
+      margin: 0 0 0.75rem;
+      font-size: 1.1rem;
+    }
+    .card p { margin: 0.5rem 0; line-height: 1.6; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 0 0 0.75rem;
+    }
+    .section-title h2 { margin: 0; font-size: 1.3rem; }
+    .small-text { color: #6b7280; font-size: 0.95rem; }
+    .product-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .product-card {
+      background: white;
+      border: 1px solid #d1d5db;
+      border-radius: 14px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .product-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #f3f4f6;
+    }
+    .badge {
+      display: inline-flex;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .footer {
+      margin-top: 2rem;
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+    .inline-block {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: #1d4ed8;
+      color: white;
+      padding: 0.65rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+    .page-section {
+      margin-bottom: 2rem;
+    }
+    .page-section:last-of-type { margin-bottom: 1rem; }
+    .two-col {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+    }
+    .two-col .card { height: 100%; }
+    @media (max-width: 720px) {
+      .two-col { grid-template-columns: 1fr; }
+      header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>My Store</h1>
+      <p class="small-text">All pages combined into one ready-to-open static site.</p>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#cart">Cart</a>
+      <a href="#account">Account</a>
+      <a href="#orders">Orders</a>
+      <a href="#wishlist">Wishlist</a>
+      <a href="#track-order">Track</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero page-section">
+    <div class="section-title">
+      <h2>Welcome to the Store</h2>
+      <span class="badge">Static Single Page</span>
+    </div>
+    <p>This combined `index.html` includes the main sections of the site so you can open it directly in a browser without running <code>pnpm dev</code>.</p>
+    <p class="small-text">Use the navigation links above to jump to each section and see the full preview of every page.</p>
+  </section>
+
+  <section id="products" class="page-section">
+    <div class="section-title">
+      <h2>Products</h2>
+      <a class="inline-block" href="#product-detail">View Sample Product</a>
+    </div>
+    <div class="product-grid">
+      <article class="product-card">
+        <img src="./public/placeholder.svg" alt="Sample Product" />
+        <h3>Sample Product</h3>
+        <p>Fresh, popular item with fast shipping and reliable reviews.</p>
+        <strong>$29.99</strong>
+      </article>
+      <article class="product-card">
+        <img src="./public/placeholder.svg" alt="Another Product" />
+        <h3>Another Product</h3>
+        <p>Quality everyday product with a clean design and great value.</p>
+        <strong>$49.99</strong>
+      </article>
+      <article class="product-card">
+        <img src="./public/placeholder.svg" alt="Third Product" />
+        <h3>Third Product</h3>
+        <p>Affordable choice with strong features and fast ordering.</p>
+        <strong>$19.99</strong>
+      </article>
+    </div>
+  </section>
+
+  <section id="product-detail" class="page-section">
+    <div class="section-title">
+      <h2>Product Detail</h2>
+      <span class="badge">Sample item</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <img src="./public/placeholder.svg" alt="Product detail image" />
+      </div>
+      <div class="card">
+        <h3>Sample Product</h3>
+        <p>Price: <strong>$29.99</strong></p>
+        <p>Short description of the product goes here. This preview page has been combined into the homepage for an all-in-one experience.</p>
+        <button class="inline-block">Add to cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="cart" class="page-section">
+    <div class="section-title">
+      <h2>Cart</h2>
+      <span class="small-text">Static preview only</span>
+    </div>
+    <div class="card">
+      <p>Your cart is empty in this static preview.</p>
+      <p>Add a product in the full app to see cart behavior.</p>
+    </div>
+  </section>
+
+  <section id="account" class="page-section">
+    <div class="section-title">
+      <h2>Account</h2>
+      <span class="small-text">Static preview only</span>
+    </div>
+    <div class="card">
+      <p>Manage your account, orders, and settings when using the full app.</p>
+      <p>This combined page shows the account preview content in one place.</p>
+    </div>
+  </section>
+
+  <section id="checkout" class="page-section">
+    <div class="section-title">
+      <h2>Checkout</h2>
+      <span class="small-text">Static sample</span>
+    </div>
+    <div class="card">
+      <p>Shipping: <strong>Standard Delivery</strong></p>
+      <p>Total: <strong>$79.98</strong></p>
+      <p>This is a static preview of the checkout page. Full checkout flow is available in the React/Next app.</p>
+    </div>
+  </section>
+
+  <section id="orders" class="page-section">
+    <div class="section-title">
+      <h2>Orders</h2>
+      <span class="small-text">Static preview only</span>
+    </div>
+    <div class="card">
+      <p>No order history is available in this static preview.</p>
+      <p>Use the full app to view real order details.</p>
+    </div>
+  </section>
+
+  <section id="wishlist" class="page-section">
+    <div class="section-title">
+      <h2>Wishlist</h2>
+      <span class="small-text">Static preview</span>
+    </div>
+    <div class="card">
+      <p>Your wishlist will appear here when using the full site.</p>
+      <p>This section is included so all pages are represented in one file.</p>
+    </div>
+  </section>
+
+  <section id="track-order" class="page-section">
+    <div class="section-title">
+      <h2>Track Order</h2>
+      <span class="small-text">Static preview only</span>
+    </div>
+    <div class="card">
+      <p>Enter your order number in the full app to track delivery status.</p>
+      <p>This section is a combined summary of the track-order page.</p>
+    </div>
+  </section>
+
+  <section id="login" class="page-section">
+    <div class="section-title">
+      <h2>Login / Signup</h2>
+      <span class="small-text">Static preview</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Login</h3>
+        <p>Login is not functional in this static page. Use the full app to sign in.</p>
+      </div>
+      <div class="card">
+        <h3>Signup</h3>
+        <p>Signup is not functional in this static page. Use the full app to create an account.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>This `index.html` has been updated to include all static page previews in one place.</p>
+    <p>For the complete dynamic site, install dependencies and run <code>pnpm dev</code>, then open <strong>http://localhost:3000</strong>.</p>
+  </footer>
+</body>
+</html>

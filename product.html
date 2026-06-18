@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product — Static Preview</title>
+  <link rel="stylesheet" href="./styles/globals.css">
+</head>
+<body>
+  <header>
+    <h1><a href="./index.html">My Store</a></h1>
+    <nav>
+      <a href="./products.html">Products</a> · <a href="./cart.html">Cart</a> · <a href="./account.html">Account</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Sample Product</h2>
+    <div style="display:flex;gap:1rem;align-items:flex-start">
+      <img src="./public/placeholder.svg" alt="product" style="width:280px;height:220px;object-fit:contain">
+      <div>
+        <p>Price: <strong>$29.99</strong></p>
+        <p>Short description of the product goes here.</p>
+        <button style="padding:8px 12px;border-radius:6px">Add to cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <small>Static preview. For full app run: <code>pnpm dev</code></small>
+  </footer>
+</body>
+</html>
